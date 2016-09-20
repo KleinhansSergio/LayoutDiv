@@ -1,0 +1,37 @@
+/*CSS=Cascating Style Sheed = Folhas de Estilos em Cascata*/
+/*Podemos passar propriedades para folha de estilo de 03 Maneiras*/
+/*1 - Propriedades CSS para uma TAG Html*/
+body {
+  /*as chaves contem todas as propriedades necessárias para estilizacao da tag definida*/
+
+/*Instalar Plugins no Aton Pigiments  Ctrl +, Virgula aparece a Settins e Install */
+/*Instalar Plugins do Google Crome, Collor Zilla para pegar as corres e ele mostras o nr correspondente
+em hexadecimal*/
+/*Na barra de tarrefa do Google clicando sobre o plugin instaldo aparece o nr da cor em hexadecimal*/
+
+  /*background-color: green;*/
+  /*usar tabela de corres em hexadecimal do Google   ff=rred ff-green ff-blue*/
+  background-color: #0E4E71;
+  /*ou*/
+  background-color: rgb(14,78,113);
+  color:#fff; /*altera cor do texto */
+}
+/*2 - Esta propriedade sempre sera precedida de # sustenido*/
+#principal{
+  background-color: red ;
+  /* SITE PARA PEGAR CORES NA WEB  color.adobe.com */
+}
+#cabecalho {background-color: green; }
+#menu      {background-color: yellow;
+color:red;
+font-weight:800;
+}
+#conteudo  {background: pink;}
+#rodape    {background-color: blue;}
+/*3 - Classes definidas através de nomes proprios idenficadas através de um . (ponto)*/
+.minha-classe{
+  color: yellow;
+  font-weight: 900;
+
+  /*max-width:500px; e min-height:150px;*/
+}
