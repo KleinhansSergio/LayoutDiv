@@ -1,0 +1,100 @@
+/*pagina 107 a 109 da apostila*/
+/*o * asteristico eh tudo eh o coringa para resetar de todo mundo para nos definirmos nossas margens*/ /**/
+/*COLOCAR SEMPRE NA FOLHA DE ESTILO PRINCIPAL*/
+*{ margin:  0;
+   padding: 0; /*margem de conteudo espaco para dentro do elemento*/
+   border:  0; }
+/*estrutura acima serve de reset (limpa todas as margens padroes das tags)*/
+
+/*faca um texte tirando o margin,.... */
+
+/* A Virgula serve FAIL BACK, se deu erro passe para nova propriedade*/
+body { font: 12px arial, helvetica, sans-serif;
+  background-color: #CCC; }
+#wrap {margin: 0 auto; /*centraliza o elemento*/
+       width: 1000px; }
+
+/*posso repetir imagens em x e y para preencher um fundo*/
+#header {background: url(imagens/fundo.jpg) repeat-x;
+         height: 200px; }
+#navbar {height:  50px; background-color: #666;}
+/* ul = recebe heranca pagina 90 da apostila */
+#navbar ul {list-style-type: none;
+            margin:   0 auto;
+            overflow: hidden;
+            width:    900px; }
+#navbar ul li {background: #CCC;
+               float: left;
+               margin: 0 10px;
+               text-align: center;
+               width:200px; }
+#navbar ul li a {color: #FFF;
+                 display: block;
+                 font-size: 20px;
+                 padding: 12px 0;}
+/*heranca para paragrafo=p e heranca para a */
+#centro > p > a {font-size :21px;
+                 background:blue; }
+
+/*Na pag 90 nao esta correto o exemplo da apostila
+utiliza-se o ascento ~ til para apontar propriedades para as TAGS Irmãs da TAG definida*/
+
+/*heranca simples a ul*/
+#minha-lista ul {background: #CCC; }
+
+/*heranças compostas de tags ul li a...*/
+/**/
+/*possso trabalhar o mouse com efeito quando estiver sobre o Link e fora do Link*/
+/*efeitos na barra de menu*/
+#navbar ul li a:hover,  /*hover=sobre nao pode ter espacos ente o a:e o elemento*/
+#navbar ul li a:active {background:#900;
+                         color:green; }
+#content  {overflow: auto; background-color: #000; }
+/*as propriedades float width e height sao responsaveis pelo posicionamento  e dimensao da DIV.
+sem elas a DIV nao sera obrigada a se fixar ou a se dimensionar de uma determinada forma*/
+#esquerda {float: left;
+           width: 300px;
+           height: 600px;
+           background: #900;
+           margin: 10px; }
+#centro {float: left;
+         width:  300px;
+         height: 600px;
+         background-color: #900;
+         margin: 10px;
+         margin-left: 30px; }
+#direita {float: right;
+          width:  300px;
+          height: 600px;
+          background-color: #900;
+          margin: 10px; }
+#footer {width: 1000px;
+         height: 50px;
+         clear: both;
+         background-color: #666; }
+/*conjunto de tags recebendo  propriedades*/
+/*todos os p =paragrafos iram receber as mesmas propriedades*/
+/*p=paragrafo h1,... Headers o a é um padding*/
+p,h1,h2,h3,h4, a {
+    /*Na familia de fontes vai procurar a fonte Trebuchet MS, arial, ....sans-serif sempre no final*/
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;  /*Fica entre aspas "Trebuchet MS" um tipo de fonte com nome composto*/
+    font-weight: normal;
+    text-decoration: none;
+    padding: 10px; }
+#content p {font-size: 14px; }
+#content a {float: right; }
+h1 {font-size: 26px;
+    color: #FFF;
+    text-align: center; }
+h2 {font-size: 20px;
+    color: #FFF; }
+h3 {font-size: 16px;
+    color: #FFF;
+    text-align: center; }
+h4 {font-size: 12px;
+    color: #036;}
+a:link    {color: yellow; } /*pseudo-elemento link: quando o link existir sem que tenha sido clicado*/
+a:visited {color: #FFF; }   /*pseudo-elemento visited muda cor do link quando ele ja foi acessado */
+a:hover   {color: #000; text-decoration: underline; }  /*quando o mouse é possicionado sobre o LINK pode usar o line-through linha riscada no meio*/
+a:active  {color: #099;}    /*quando o mouse é pressionado sobre o elemento mas nao e soltado */
+#centro:active { background:pink; cursor:pointer; } /*ao clicar com mouse no elemento muda para cor x */
